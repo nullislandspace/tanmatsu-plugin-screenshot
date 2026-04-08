@@ -1,0 +1,28 @@
+{
+    "name": "Screenshot",
+    "description": "Capture screenshots with LOGO+P, saves to /sd/screenshot-*.ppm",
+    "categories": [
+        "tools"
+    ],
+    "version": "1.0.0",
+    "icon": {},
+    "author": "Rene Schickbauer",
+    "license_type": "MIT",
+    "application": [
+        {
+            "targets": [
+                "tanmatsu",
+                "konsool"
+            ],
+            "revision": 1,
+            "type": "plugin",
+            "executable": "screenshot.plugin",
+            "assets": [
+                {
+                    "source_file": "plugin.json",
+                    "target_file": "plugin.json"
+                }
+            ]
+        }
+    ]
+}

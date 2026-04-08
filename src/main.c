@@ -122,9 +122,9 @@ static bool input_hook_callback(plugin_input_event_t* event, void* user_data) {
 // Plugin metadata
 static const plugin_info_t plugin_info = {
     .name = "Screenshot",
-    .slug = "screenshot",
+    .slug = "at.cavac.screenshot",
     .version = "1.0.0",
-    .author = "Tanmatsu",
+    .author = "Rene Schickbauer",
     .description = "Capture screenshots with LOGO+P",
     .api_version = TANMATSU_PLUGIN_API_VERSION,
     .type = PLUGIN_TYPE_HOOK,

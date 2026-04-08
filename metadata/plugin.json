@@ -1,8 +1,8 @@
 {
     "name": "Screenshot",
-    "slug": "screenshot",
+    "slug": "at.cavac.screenshot",
     "version": "1.0.0",
-    "author": "Tanmatsu",
+    "author": "Rene Schickbauer",
     "description": "Capture screenshots with LOGO+P, saves to /sd/screenshot-*.ppm",
     "type": "hook",
     "api_version": 1,
