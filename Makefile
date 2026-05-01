@@ -7,7 +7,7 @@ APP_SLUG_NAME := at.cavac.screenshot
 PLUGIN_SDK := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))/../tanmatsu-launcher/tools/plugin-sdk
 TOOLCHAIN := $(PLUGIN_SDK)/toolchain-plugin.cmake
 BADGEDIR := /tmp/mnt
-DEST := $(BADGEDIR)/int/plugins
+DEST := $(BADGEDIR)/sd/plugins
 
 .PHONY: all build clean rebuild install info apprepo
 
@@ -46,6 +46,7 @@ install: build
 	@mkdir -p $(DEST)/$(APP_SLUG_NAME)
 	@cp $(BUILD_DIR)/$(PLUGIN_NAME).plugin $(DEST)/$(APP_SLUG_NAME)/
 	@cp metadata/plugin.json $(DEST)/$(APP_SLUG_NAME)/
+	@cp metadata/metadata.json $(DEST)/$(APP_SLUG_NAME)/
 	badgefs -u $(BADGEDIR)
 	@echo "Installed to $(DEST)/$(APP_SLUG_NAME)/"
 
