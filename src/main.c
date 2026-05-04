@@ -85,15 +85,15 @@ static void save_screenshot(void) {
 }
 
 // Input hook callback - called for every input event
-static bool input_hook_callback(plugin_input_event_t* event, void* user_data) {
+static bool input_hook_callback(asp_input_event_t* event, void* user_data) {
     (void)user_data;
 
     // Only handle scancode events
-    if (event->type != PLUGIN_INPUT_EVENT_TYPE_SCANCODE) {
+    if (event->type != ASP_INPUT_EVENT_TYPE_SCANCODE) {
         return false;
     }
 
-    uint32_t scancode = event->key;
+    uint32_t scancode = event->args_scancode.scancode;
 
     // Track LOGO key press (left or right meta key)
     if (scancode == BSP_INPUT_SCANCODE_LEFTMETA || scancode == BSP_INPUT_SCANCODE_RIGHTMETA) {
@@ -176,7 +176,6 @@ static const plugin_entry_t entry = {
     .menu_render = NULL,
     .menu_select = NULL,
     .service_run = NULL,
-    .hook_event = NULL,
 };
 
 // Register this plugin with the host
